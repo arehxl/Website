@@ -8,25 +8,27 @@ document.getElementById("submitButton").addEventListener("click", function() {
     
     const responseMessage = document.getElementById("responseMessage");
 
-   
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (emailInput == "") {
         responseMessage.style.color = "red";
         responseMessage.textContent = "Please enter your email address.";
         return;
     }
 
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(emailInput)) {
+    if (!emailRegex.test(emailInput)) {
         responseMessage.style.color = "red";
         responseMessage.textContent = "Invalid email format.";
-        return;
+        return; 
     }
 
-
     responseMessage.style.color = "green";
-    responseMessage.textContent = "Thank you! We will keep you updated.";
-});
+    responseMessage.textContent = "Redirecting...";
+
+    setTimeout(() => {
+        window.location.href = "thirdpage.html";
+    }, 2000);
+    });
 
 document.querySelector('.enter-button').addEventListener('click', (e) => {
     e.preventDefault(); document.querySelector('.landing').style.opacity='0';
@@ -34,3 +36,10 @@ document.querySelector('.enter-button').addEventListener('click', (e) => {
         window.location.href = e.target.href;
     }, 2000);
     });
+
+    document.querySelector('.fade-button').addEventListener('click', (e) => {
+        e.preventDefault(); document.querySelector('.landing').style.opacity='0';
+        setTimeout(() => {
+            window.location.href = e.target.href;
+        }, 2000);
+        });
