@@ -27,3 +27,10 @@ document.getElementById("submitButton").addEventListener("click", function() {
     responseMessage.style.color = "green";
     responseMessage.textContent = "Thank you! We will keep you updated.";
 });
+
+document.querySelector('.enter-button').addEventListener('click', (e) => {
+    e.preventDefault(); document.querySelector('.landing').style.opacity='0';
+    setTimeout(() => {
+        window.location.href = e.target.href;
+    }, 2000);
+    });

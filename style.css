@@ -1,5 +1,5 @@
 body {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 200;
     font-style: normal;
     text-align: center;
@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    text-transform: uppercase;
 }
 
 .background-image {
@@ -34,7 +35,7 @@ button {
     background: linear-gradient(135deg, #0a0b0b, #11282b);
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 6px 20px;
     cursor: pointer;
     border-radius: 25px;
     font-size: 10px;
@@ -56,3 +57,45 @@ img {
     margin: 0 auto;
 }
 
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.enter-button {
+    padding: 0px 0px;
+    font-size: 1.7rem;
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    border: 0px solid rgb(26, 24, 24);
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+    color: black;
+}
+
+a.enter-button {
+    transition: opacity 0.3s ease;
+}
+
+.landing {
+    transition: opacity 2s ease;
+    height: 100vh;
+    width: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://hypebeast.com/image/2023/08/emerging-uk-london-brand-splitdat-everybody-eats-collection-2.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
