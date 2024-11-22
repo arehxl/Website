@@ -43,3 +43,10 @@ document.querySelector('.enter-button').addEventListener('click', (e) => {
             window.location.href = e.target.href;
         }, 2000);
         });
+
+        document.querySelector('.close-button').addEventListener('click', (e) => {
+            e.preventDefault(); document.querySelector('.landing').style.opacity='0';
+            setTimeout(() => {
+                window.location.href = e.target.href;
+            }, 2000);
+            });
